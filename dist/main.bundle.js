@@ -345,7 +345,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/signup/signup.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container\">\n\t<form class=\"form-signin\" (ngSubmit)=\"signup()\" #signupForm=\"ngForm\">\n\t\t<div class=\"alert alert-warning alert-dismissible\" role=\"alert\" *ngIf=\"message !== ''\">\n\t\t  <button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-label=\"Close\"><span aria-hidden=\"true\">&times;</span></button>\n\t\t  {{message}}\n\t\t</div>\n\t\t<h2 class=\"form-signin-heading\">Sign Up Now</h2>\n\t\t<label for=\"inputFirstName\" class=\"sr-only\">First Name</label>\n\t\t<input type=\"firstName\" class=\"form-control\" placeholder=\"First Name\" [(ngModel)]=\"signupData.firstName\" name=\"firstName\" required/>\n\t\t<label for=\"inputLastName\" class=\"sr-only\">Email address</label>\n\t\t<input type=\"lastName\" class=\"form-control\" placeholder=\"Last Name\" [(ngModel)]=\"signupData.lastName\" name=\"lastName\" required/>\n\t\t<label for=\"inputDisplayName\" class=\"sr-only\">Display Name</label>\n\t\t<input type=\"displayName\" class=\"form-control\" placeholder=\"Display Name\" [(ngModel)]=\"signupData.displayName\" name=\"displayName\" required/>\n\t\t<label for=\"inputEmail\" class=\"sr-only\">Email address</label>\n\t\t<input type=\"email\" class=\"form-control\" placeholder=\"Email address\" [(ngModel)]=\"signupData.email\" name=\"email\" required/>\n\t\t<label for=\"inputUserName\" class=\"sr-only\">User Name</label>\n\t\t<input type=\"email\" class=\"form-control\" placeholder=\"Username\" [(ngModel)]=\"signupData.username\" name=\"username\" required/>\n\t\t<label for=\"inputPassword\" class=\"sr-only\">Password</label>\n\t\t<input type=\"password\" class=\"form-control\" placeholder=\"Password\" [(ngModel)]=\"signupData.password\" name=\"password\" required/>\n\t\t<button class=\"btn btn-lg btn-primary btn-block\" type=\"submit\" [disabled]=\"!signupForm.form.valid\">Sign Up</button>\n\t</form>\n</div>\n\n\n"
+module.exports = "<div class=\"container\">\n\t<form class=\"form-signin\" (ngSubmit)=\"signup()\" #signupForm=\"ngForm\">\n\t\t<div class=\"alert alert-warning alert-dismissible\" role=\"alert\" *ngIf=\"message !== ''\">\n\t\t  <button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-label=\"Close\"><span aria-hidden=\"true\">&times;</span></button>\n\t\t  {{message}}\n\t\t</div>\n\t\t<h2 class=\"form-signin-heading\">Sign Up Now</h2>\n\t\t<label for=\"inputEmail\" class=\"sr-only\">Email address</label>\n\t\t<input type=\"email\" class=\"form-control\" placeholder=\"Email address\" [(ngModel)]=\"signupData.username\" name=\"username\" required/>\n\t\t<label for=\"inputPassword\" class=\"sr-only\">Password</label>\n\t\t<input type=\"password\" class=\"form-control\" placeholder=\"Password\" [(ngModel)]=\"signupData.password\" name=\"password\" required/>\n\t\t<button class=\"btn btn-lg btn-primary btn-block\" type=\"submit\" [disabled]=\"!signupForm.form.valid\">Sign Up</button>\n\t</form>\n</div>\n"
 
 /***/ }),
 
@@ -375,7 +375,7 @@ var SignupComponent = (function () {
     function SignupComponent(http, router) {
         this.http = http;
         this.router = router;
-        this.signupData = { firstName: '', lastName: '', displayName: '', email: '', username: '', password: '' };
+        this.signupData = { username: '', password: '' };
         this.message = '';
     }
     SignupComponent.prototype.ngOnInit = function () {
