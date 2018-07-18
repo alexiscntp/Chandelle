@@ -12,7 +12,7 @@ import { of } from 'rxjs/observable/of';
 })
 export class SignupComponent implements OnInit {
 
-  signupData = { username:'', password:'' };
+  signupData = {displayName:'', email:'', userName:'', password:'' };
   message = '';
 
   constructor(private http: HttpClient, private router: Router) { }

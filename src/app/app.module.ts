@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 import { BookComponent } from './book/book.component';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
+import { AppHeaderComponent } from './components/header/app-header.component';
 
 const appRoutes: Routes = [
   {
@@ -36,7 +37,8 @@ const appRoutes: Routes = [
     AppComponent,
     BookComponent,
     LoginComponent,
-    SignupComponent
+    SignupComponent,
+	AppHeaderComponent
   ],
   imports: [
     BrowserModule,

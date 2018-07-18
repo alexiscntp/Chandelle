@@ -9,11 +9,13 @@ var User = require("../models/user");
 var Book = require("../models/book");
 
 router.post('/signup', function(req, res) {
-  if (!req.body.username || !req.body.password) {
+  if (!req.body.userName || !req.body.password) {
     res.json({success: false, msg: 'Please pass username and password.'});
   } else {
     var newUser = new User({
-      username: req.body.username,
+      displayName:req.body.displayName,
+      email:req.body.email,
+      userName: req.body.userName,
       password: req.body.password
     });
     // save the user
@@ -28,7 +30,7 @@ router.post('/signup', function(req, res) {
 
 router.post('/signin', function(req, res) {
   User.findOne({
-    username: req.body.username
+    username: req.body.userName
   }, function(err, user) {
     if (err) throw err;
 

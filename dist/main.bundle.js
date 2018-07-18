@@ -38,7 +38,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/app.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<router-outlet></router-outlet>\n"
+module.exports = "<app-header title='Momentz-4-ever'></app-header>\n<h3>Hello from app component</h3>\n\n<router-outlet></router-outlet>\n\n"
 
 /***/ }),
 
@@ -87,12 +87,14 @@ var AppComponent = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__book_book_component__ = __webpack_require__("../../../../../src/app/book/book.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__login_login_component__ = __webpack_require__("../../../../../src/app/login/login.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__signup_signup_component__ = __webpack_require__("../../../../../src/app/signup/signup.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__components_header_app_header_component__ = __webpack_require__("../../../../../src/app/components/header/app-header.component.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -132,7 +134,8 @@ var AppModule = (function () {
                 __WEBPACK_IMPORTED_MODULE_5__app_component__["a" /* AppComponent */],
                 __WEBPACK_IMPORTED_MODULE_6__book_book_component__["a" /* BookComponent */],
                 __WEBPACK_IMPORTED_MODULE_7__login_login_component__["a" /* LoginComponent */],
-                __WEBPACK_IMPORTED_MODULE_8__signup_signup_component__["a" /* SignupComponent */]
+                __WEBPACK_IMPORTED_MODULE_8__signup_signup_component__["a" /* SignupComponent */],
+                __WEBPACK_IMPORTED_MODULE_9__components_header_app_header_component__["a" /* AppHeaderComponent */]
             ],
             imports: [
                 __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
@@ -229,6 +232,68 @@ var BookComponent = (function () {
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_common_http__["a" /* HttpClient */], __WEBPACK_IMPORTED_MODULE_2__angular_router__["a" /* Router */]])
     ], BookComponent);
     return BookComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "../../../../../src/app/components/header/app-header.component.css":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "header {\r\n    background-color: #FFFFFF;\r\n    padding: 30px;\r\n    text-align: center;\r\n    font-size: 35px;\r\n    color: white;\r\n}", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/components/header/app-header.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<header>\r\n<img src=\"./assets/img/Chandelle.png\" height=\"180\" width=\"500\">\r\n</header>\r\n<hr>"
+
+/***/ }),
+
+/***/ "../../../../../src/app/components/header/app-header.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppHeaderComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var AppHeaderComponent = (function () {
+    function AppHeaderComponent() {
+    }
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["D" /* Input */])(),
+        __metadata("design:type", String)
+    ], AppHeaderComponent.prototype, "title", void 0);
+    AppHeaderComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+            selector: 'app-header',
+            template: __webpack_require__("../../../../../src/app/components/header/app-header.component.html"),
+            styles: [__webpack_require__("../../../../../src/app/components/header/app-header.component.css")]
+        })
+    ], AppHeaderComponent);
+    return AppHeaderComponent;
 }());
 
 
@@ -345,7 +410,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/signup/signup.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container\">\n\t<form class=\"form-signin\" (ngSubmit)=\"signup()\" #signupForm=\"ngForm\">\n\t\t<div class=\"alert alert-warning alert-dismissible\" role=\"alert\" *ngIf=\"message !== ''\">\n\t\t  <button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-label=\"Close\"><span aria-hidden=\"true\">&times;</span></button>\n\t\t  {{message}}\n\t\t</div>\n\t\t<h2 class=\"form-signin-heading\">Sign Up Now</h2>\n\t\t<label for=\"inputEmail\" class=\"sr-only\">Email address</label>\n\t\t<input type=\"email\" class=\"form-control\" placeholder=\"Email address\" [(ngModel)]=\"signupData.username\" name=\"username\" required/>\n\t\t<label for=\"inputPassword\" class=\"sr-only\">Password</label>\n\t\t<input type=\"password\" class=\"form-control\" placeholder=\"Password\" [(ngModel)]=\"signupData.password\" name=\"password\" required/>\n\t\t<button class=\"btn btn-lg btn-primary btn-block\" type=\"submit\" [disabled]=\"!signupForm.form.valid\">Sign Up</button>\n\t</form>\n</div>\n"
+module.exports = "<div class=\"container\">\n\t<form class=\"form-signin\" (ngSubmit)=\"signup()\" #signupForm=\"ngForm\">\n\t\t<div class=\"alert alert-warning alert-dismissible\" role=\"alert\" *ngIf=\"message !== ''\">\n\t\t  <button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-label=\"Close\"><span aria-hidden=\"true\">&times;</span></button>\n\t\t  {{message}}\n\t\t</div>\n\t\t<h2 class=\"form-signin-heading\">Sign Up Now</h2>\n\t\t<label for=\"displayName\" class=\"sr-only\">Display Name</label>\n\t\t<input type=\"displayName\" class=\"form-control\" placeholder=\"Display Name\" [(ngModel)]=\"signupData.displayName\" name=\"displayName\" required/>\n\n        <label for=\"email\" class=\"sr-only\">Email address</label>\n\t\t<input type=\"email\" class=\"form-control\" placeholder=\"Email address\" [(ngModel)]=\"signupData.email\" name=\"email\" required/>\n\n\t\t<label for=\"userName\" class=\"sr-only\">Username</label>\n\t\t<input type=\"userName\" class=\"form-control\" placeholder=\"Username\" [(ngModel)]=\"signupData.userName\" name=\"userName\" required/>\n\n\t\t<label for=\"inputPassword\" class=\"sr-only\">Password</label>\n\t\t<input type=\"password\" class=\"form-control\" placeholder=\"Password\" [(ngModel)]=\"signupData.password\" name=\"password\" required/>\n\t\t<button class=\"btn btn-lg btn-primary btn-block\" type=\"submit\" [disabled]=\"!signupForm.form.valid\">Sign Up</button>\n\t</form>\n</div>\n"
 
 /***/ }),
 
@@ -375,7 +440,7 @@ var SignupComponent = (function () {
     function SignupComponent(http, router) {
         this.http = http;
         this.router = router;
-        this.signupData = { username: '', password: '' };
+        this.signupData = { displayName: '', email: '', userName: '', password: '' };
         this.message = '';
     }
     SignupComponent.prototype.ngOnInit = function () {
