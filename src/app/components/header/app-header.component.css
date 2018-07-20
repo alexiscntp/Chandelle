@@ -1,7 +1,67 @@
+
 header {
-    background-color: #FFFFFF;
-    padding: 30px;
+    background-color: 	#FFFFFF;
+    padding: 20px;
     text-align: center;
     font-size: 35px;
     color: white;
+    width: 1900px;
+    height:200px;
+}
+
+h5 {
+    text-align: left;
+}
+
+#leftContainer{
+    margin-left: 20%;
+    float: left;
+    height: 100px;
+    width: 60px;
+}
+#rightContainer{
+    margin-right: 20%;
+    float: right;
+    height: 100px;
+    width: 60px;
+}
+
+#container {   
+  width: 1900px; 
+
+}
+
+ul {
+  width: auto;
+}
+li {
+  display: inline-block;
+}
+
+
+#loginLink {
+    position: absolute;
+    top: 45px;
+    left: 350px;
+    font-size:15px;
+    color:black;
+}
+
+#signupLink {
+    position: absolute;
+    top: 45px;
+    left: 430px;
+    font-size:15px;
+    color:black;
+}
+
+#instaLink {
+    position: absolute;
+    top: 40px;
+    right: 300px;
+}
+
+a:visited {
+    color: black;
+    text-decoration: none;
 }
